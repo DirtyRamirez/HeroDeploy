@@ -2,22 +2,16 @@ version: '3.8'
 name: academy
 services:
   quotes:
-    image: quotes
+    image: dirtyramirez/quotes
     container_name: quotes
     command: sleep 1000
-#    build:
-#      context: /Users/olesk/Development/github/academy-quotes/
-#      dockerfile: Dockerfile
     ports:
       - "8082:8082"
     networks:
       - default
   hero:
-    image: hero
+    image: dirtyramirez/hero
     container_name: hero
-#    build:
-#      context: /Users/olesk/Development/github/academy-hero/
-#      dockerfile: Dockerfile
     ports:
       - "8081:8081"
     networks:
